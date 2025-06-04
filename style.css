@@ -1,0 +1,114 @@
+/* Reset para margenes*/
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+/* Fondo general y estilo de fuente */
+body {
+  background-color: #e2d8bc;
+  font-family: 'Segoe UI', sans-serif;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 30px;
+}
+
+/* Titulo principal */
+#titulo-principal {
+  color: #6c7da3;
+  text-align: center;
+  margin-bottom: 30px;
+}
+
+/* Contenedor para centrar y organizar las cajas */
+.contenedor-cajas {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+  justify-content: center;
+  width: 100%;
+  max-width: 1200px;
+}
+
+/* Estilo general para todas las cajas */
+.caja {
+  background-color: #ffffff;
+  border: 1px solid #ddd;
+  border-radius: 10px;
+  padding: 20px;
+  width: 300px;
+  text-align: center;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.08);
+  transition: 0.3s ease;
+}
+
+/* Efecto de elevación al pasar el mouse */
+.caja:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 20px rgba(0,0,0,0.15);
+}
+
+/* Caja especial con fondo y borde distintos */
+#caja-especial {
+  border-color: #e67e22;
+  background-color: #fdf0e6;
+}
+
+/* Estilo de texto */
+.texto {
+  color: #555;
+  font-size: 16px;
+  margin-bottom: 15px;
+}
+
+/* Estilo para los botones */
+.btn {
+  background-color: #3498db;
+  color: #fff;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: 0.2s ease;
+  display: inline-block;
+}
+
+/* Efecto al pasar el mouse por el boton */
+.btn:hover {
+  background-color: #2980b9;
+  transform: scale(1.05);
+}
+
+/* Caja animada */
+.animada {
+  width: 220px;
+  height: 60px;
+  background: #0b3c69;
+  color: white;
+  text-align: center;
+  line-height: 60px;
+  margin: 30px auto;
+  position: relative;
+  border-radius: 8px;
+  animation: mover 3s infinite;
+}
+
+/* Cambiar color y girar al pasar el mouse */
+.animada:hover {
+  background: #469faf;
+  transform: rotate(3deg);
+}
+
+/* Pseudoelemento que agrega un emoji despues del texto */
+.animada::after {
+  content: " 👋";
+}
+
+/* Animacion que mueve la caja animada horizontalmente */
+@keyframes mover {
+  0%   { left: 0; }
+  50%  { left: 100px; }
+  100% { left: 0; }
+}
